@@ -107,4 +107,14 @@ footer p {
   border-bottom-right-radius: 10px;
   margin-left: 20%;
 }
+#projects {
+  display:flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
 
