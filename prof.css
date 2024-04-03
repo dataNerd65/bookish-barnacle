@@ -1,25 +1,39 @@
-* { margin:0; padding:0; }
+* { 
+  margin: 0; 
+  padding: 0; 
+}
 
-html, body { width:100vw; height:100vh; } /* just to be sure these are full screen*/
-html {
-  scroll-behavior: smooth;
+html, body { 
+  width: 100vw; 
+  height: 100vh; 
+  scroll-behavior: smooth; 
+  position: relative;
+  overflow-x: hidden;
 }
 
 canvas { 
-   overflow: hidden;
-   position:fixed;
-   top: 0;
-   left: 0;
-   width:100vw;
-   height:100vh;
-   background-color:black;
-   z-index: 0;
+  overflow: hidden;
+  display: block;
+  margin: 20px 0;
+  /*position: absolute;*/
+  top: 50px;
+  left: 0;
+  width: 100vw;
+  height: calc(150vh);
+  background-color: black;
+  z-index: 1;
 }
+
 header {
   background-color: #333;
   color: white;
   padding: 10px;
   text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
 }
 
 nav ul {
@@ -36,41 +50,54 @@ nav ul li a {
   color: white;
   text-decoration: none;
 }
+
 footer {
+  clear:both;
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 10 px;
+  padding: 10px;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
 }
+
 footer p {
-  margin: 0;
+  margin: 10px;
 }
-/* Responsive CSS*/
-@media (max-width: 600px){
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
+
+.content-wrapper {
+  margin-top: 60px; /* Height of the header */
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+
 }
-#about {
+
+#about, #projects {
   position: absolute;
-  background-color: #333;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 80%;
   max-width: 500px;
   padding: 20px;
   box-sizing: border-box;
   border-radius: 5px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#about {
+  top: 30%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  transform: translate(-50%, -50%);
+  background-color: #333;
+}
+
+#projects {
+  top: 60%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  transform: translateX(-50%);
+  background-color: rgb(9, 12, 12);
 }
 
 #chatbox {
@@ -107,14 +134,5 @@ footer p {
   border-bottom-right-radius: 10px;
   margin-left: 20%;
 }
-#projects {
-  display:flex;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  color: white;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
+
 
