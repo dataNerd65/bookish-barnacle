@@ -4,14 +4,18 @@
 }
 
 html, body { 
+  display: flex;
+  flex-direction: column;
+  margin: 0;
   width: 100vw; 
-  height: 100vh; 
+  min-height: 100vh; 
   scroll-behavior: smooth; 
   position: relative;
   overflow-x: hidden;
 }
 
 canvas { 
+  flex-grow: 1;
   overflow: hidden;
   display: block;
   margin: 20px 0;
@@ -19,7 +23,7 @@ canvas {
   top: 50px;
   left: 0;
   width: 100vw;
-  height: calc(150vh);
+  height: calc(250vh);
   background-color: black;
   z-index: 1;
 }
@@ -34,6 +38,15 @@ header {
   left: 0;
   width: 100%;
   z-index: 3;
+}
+header a {
+  color: white; /* Initial color */
+  text-decoration: none; /* Removes the underline */
+  transition: color 0.3s ease; /* Animates the color change */
+}
+
+header a:hover {
+  color: rgb(225, 7, 11); /* Color when hovered */
 }
 
 nav ul {
@@ -75,7 +88,7 @@ footer p {
 
 }
 
-#about, #projects {
+#about, #projects, #skills {
   position: absolute;
   width: 80%;
   max-width: 500px;
@@ -87,17 +100,30 @@ footer p {
 }
 
 #about {
-  top: 30%; /* Adjust as needed */
+  top: 15%; /* Adjust as needed */
   left: 50%; /* Adjust as needed */
   transform: translate(-50%, -50%);
-  background-color: #333;
+  border: 2px solid #d7caca
+  /*background-color: #b3abab;*/
 }
 
 #projects {
-  top: 60%; /* Adjust as needed */
+  top: 30%; /* Adjust as needed */
   left: 50%; /* Adjust as needed */
   transform: translateX(-50%);
-  background-color: rgb(9, 12, 12);
+  border: 2px solid #d7caca
+ /* background-color: rgb(188, 202, 202);*/
+}
+#skills {
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  /*background-color: #cfcfcf;*/
+  border: 2px solid #d7caca
+}
+.message.sent ul {
+  padding-left: 0;
+  list-style-type: circle;
 }
 
 #chatbox {
@@ -117,7 +143,7 @@ footer p {
 }
 
 .message.received {
-  background-color: #f4faf7;
+  background-color: #ecf5f0;
   text-align: left;
   align-self: flex-start;
   border-top-left-radius: 10px;
@@ -134,5 +160,6 @@ footer p {
   border-bottom-right-radius: 10px;
   margin-left: 20%;
 }
+
 
 
