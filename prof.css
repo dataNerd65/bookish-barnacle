@@ -23,13 +23,13 @@ canvas {
   top: 50px;
   left: 0;
   width: 100vw;
-  height: calc(300vh);
+  height: calc(500vh);
   background-color: black;
   z-index: 1;
 }
 
 header {
-  background-color: #333;
+  background-color: #000000;
   color: white;
   padding: 10px;
   text-align: center;
@@ -66,7 +66,7 @@ nav ul li a {
 
 footer {
   clear:both;
-  background-color: #333;
+  background-color: #000000;
   color: white;
   text-align: center;
   padding: 10px;
@@ -74,10 +74,22 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer a {
+  color: rgb(12, 255, 81); /* Initial color */
+  text-decoration: none; /* Removes the underline */
+  transition: color 0.3s ease; /* Animates the color change */
+  margin-left: 10px; /* Adds some space between the icons */
 }
 
 footer p {
   margin: 10px;
+}
+footer a:hover {
+  color: #4c0deb; /* Change to the color you want on hover */
 }
 
 .content-wrapper {
@@ -88,7 +100,7 @@ footer p {
 
 }
 
-#about, #projects, #skills, #contact {
+#about, #projects, #skills, #contact, #experience {
   position: absolute;
   width: 80%;
   max-width: 500px;
@@ -108,21 +120,27 @@ footer p {
 }
 
 #projects {
-  top: 30%; /* Adjust as needed */
+  top: 28%; /* Adjust as needed */
   left: 50%; /* Adjust as needed */
   transform: translateX(-50%);
   border: 2px solid #d7caca
  /* background-color: rgb(188, 202, 202);*/
 }
 #skills {
-  top: 55%;
+  top: 43%;
   left: 50%;
   transform: translateX(-50%);
   /*background-color: #cfcfcf;*/
   border: 2px solid #d7caca
 }
 #contact {
-  top: 70%;
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #d7caca
+}
+#experience {
+  top: 85%;
   left: 50%;
   transform: translateX(-50%);
   border: 2px solid #d7caca
@@ -159,7 +177,17 @@ footer p {
   border-bottom-left-radius: 10px;
   margin-right: 20%;
 }
-
+.message.received textarea {
+  width: 90%; /* Full width */
+  height: 90px; 
+  padding: 10px; /* Adds some space inside the box */
+  border: 1px solid #040303; /* Adds a border */
+  border-radius: 4px; /* Rounds the corners */
+  resize: vertical; /* Allows the user to resize the box vertically */
+}
+button.glow {
+  box-shadow: 0 0 10px #db0f60, 0 0 20px #61a48a, 0 0 30px #2305bd;
+}
 .message.sent {
   background-color: #0ae73a;
   color: rgb(7, 6, 6);
@@ -168,6 +196,25 @@ footer p {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-left: 20%;
+}
+.message.sent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color:  #0ae73a; 
+  border-left-color: #0ae73a; 
+  margin-top: -10px; 
+  margin-right: -10px; 
+}
+.message.sent img {
+  width: 200px;
+  height: 300px;
+  border-radius: 0%;
+  border: #d7caca;
 }
 
 

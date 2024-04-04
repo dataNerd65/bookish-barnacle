@@ -84,3 +84,12 @@ function DistanceBetween(p1,p2) {
 }
 create();
 particles();
+$(document).ready(function() {
+  $("button").hover(
+    function() {
+      $(this).addClass("glow");
+    }, function() {
+      $(this).removeClass("glow");
+    }
+  );
+});
