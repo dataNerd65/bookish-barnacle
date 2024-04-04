@@ -23,7 +23,7 @@ canvas {
   top: 50px;
   left: 0;
   width: 100vw;
-  height: calc(250vh);
+  height: calc(300vh);
   background-color: black;
   z-index: 1;
 }
@@ -88,7 +88,7 @@ footer p {
 
 }
 
-#about, #projects, #skills {
+#about, #projects, #skills, #contact {
   position: absolute;
   width: 80%;
   max-width: 500px;
@@ -119,6 +119,12 @@ footer p {
   left: 50%;
   transform: translateX(-50%);
   /*background-color: #cfcfcf;*/
+  border: 2px solid #d7caca
+}
+#contact {
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
   border: 2px solid #d7caca
 }
 .message.sent ul {
