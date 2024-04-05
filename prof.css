@@ -31,8 +31,10 @@ canvas {
 header {
   background-color: #000000;
   color: white;
-  padding: 10px;
+  padding: 3px;
   text-align: center;
+  /*display: flex;*/
+  /*justify-content: space-between;*/
   position: fixed;
   top: 0;
   left: 0;
@@ -44,6 +46,10 @@ header a {
   color: white; /* Initial color */
   text-decoration: none; /* Removes the underline */
   transition: color 0.3s ease; /* Animates the color change */
+}
+.resume-section {
+  display: flex;
+  gap: 5px;
 }
 
 header a:hover {
@@ -121,7 +127,7 @@ footer a:hover {
 }
 
 #projects {
-  top: 28%; /* Adjust as needed */
+  top: 32%; /* Adjust as needed */
   left: 50%; /* Adjust as needed */
   transform: translateX(-50%);
   border: 2px solid #d7caca
@@ -190,7 +196,7 @@ button.glow {
   box-shadow: 0 0 10px #db0f60, 0 0 20px #61a48a, 0 0 30px #2305bd;
 }
 .message.sent {
-  background-color: #0ae73a;
+  background-color: #0bff30;
   color: rgb(7, 6, 6);
   text-align: left;
   align-self: flex-start;
