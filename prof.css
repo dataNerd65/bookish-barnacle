@@ -213,12 +213,37 @@ button.glow {
   margin-right: -10px; 
 }
 .message.sent img {
-  width: 200px;
-  height: 300px;
+  width: 100%;
+  height: auto;
   border-radius: 0%;
   border: #d7caca;
 }
 
+#rotate-device {
+  display: none;
+}
 
+@media screen and (max-width: 420px) {
+  .message.sent img {
+    width: 50%; 
+  }
+}
 
+@media screen and (max-width: 420px) and (orientation: landscape) and (min-height: 600px) {
+  body > *:not(#rotate-device) {
+    display: none;
+  }
 
+  #rotate-device {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 50vh;
+    color: white;
+  }
+}
