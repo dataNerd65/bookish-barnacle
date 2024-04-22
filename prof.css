@@ -23,7 +23,7 @@ canvas {
   top: 50px;
   left: 0;
   width: 100vw;
-  height: calc(500vh);
+  height: calc(700vh);
   background-color: rgb(0, 0, 0);
   z-index: 1;
 }
@@ -127,14 +127,14 @@ footer a:hover {
 }
 
 #projects {
-  top: 32%; /* Adjust as needed */
+  top: 30%; /* Adjust as needed */
   left: 50%; /* Adjust as needed */
   transform: translateX(-50%);
   border: 2px solid #d7caca
  /* background-color: rgb(188, 202, 202);*/
 }
 #skills {
-  top: 48%;
+  top: 42%;
   left: 50%;
   transform: translateX(-50%);
   /*background-color: #cfcfcf;*/
@@ -147,7 +147,7 @@ footer a:hover {
   border: 2px solid #d7caca
 }
 #experience {
-  top: 85%;
+  top: 75%;
   left: 50%;
   transform: translateX(-50%);
   border: 2px solid #d7caca
