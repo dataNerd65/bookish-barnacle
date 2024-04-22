@@ -35,8 +35,8 @@
         $mail->Port = 587;
         $mail->SMTPSecure = 'tls';
         $mail->SMTPAuth = true;
-        $mail->Username = "pkiarie811@gmail.com";
-        $mail->Password = "humblepeter65";
+        $mail->Username = getenv('GMAIL_USERNAME');
+        $mail->Password = getenv('GMAIL_PASSWORD');
         //Recipients
         $mail->setFrom('from@example.com', 'First Last');
         $mail->addAddress('whoto@example.com', 'John Doe');
