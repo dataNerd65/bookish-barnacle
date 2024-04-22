@@ -24,6 +24,7 @@
     }
 
 
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // validate message
         if (empty($_POST["message"])) {
