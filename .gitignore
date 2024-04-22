@@ -4,3 +4,4 @@ launch.json
 \vendor
 composer.lock
 composer.json
+handle_messages.php
