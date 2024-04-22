@@ -140,6 +140,11 @@ footer a:hover {
   /*background-color: #cfcfcf;*/
   border: 2px solid #d7caca
 }
+.skills ul {
+  list-style-type: disc;
+  color: aliceblue;
+}
+
 #contact {
   top: 58%;
   left: 50%;
