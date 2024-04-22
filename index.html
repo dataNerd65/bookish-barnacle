@@ -98,8 +98,8 @@
                 <p>You can also write a message to me directly from here.</p>
             </div>
             <div class="message received">
-                <form method="post" action="mailto:pkiarie811@gmail.com">
-                 <!--  <input type="hidden" name="subject" value="Message from website">--> 
+                <form method="post" action="handle_messages.php">
+                 <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                     <textarea name="message" placeholder="Write your message here..." required></textarea>
                     <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
                 </form>
