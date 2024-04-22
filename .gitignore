@@ -1,3 +1,6 @@
 jquery-3.7.1.min.js
 .vscode/
 launch.json
+\vendor
+composer.lock
+composer.json
