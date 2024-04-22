@@ -18,6 +18,11 @@
 
     require 'vendor/autoload.php';
 
+    if (file_exists(__DIR__ . '/.env')) {
+        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+    }
+
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // validate message
@@ -35,8 +40,8 @@
         $mail->Port = 587;
         $mail->SMTPSecure = 'tls';
         $mail->SMTPAuth = true;
-        $mail->Username = getenv('GMAIL_USERNAME');
-        $mail->Password = getenv('GMAIL_PASSWORD');
+        $mail->Username = $_ENV['MAIL_USERNAME'];
+        $mail->Password = $_ENV['MAIL_PASSWORD']; // Environment variables
         //Recipients
         $mail->setFrom('from@example.com', 'First Last');
         $mail->addAddress('whoto@example.com', 'John Doe');

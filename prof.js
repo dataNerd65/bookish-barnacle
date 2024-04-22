@@ -93,3 +93,7 @@ $(document).ready(function() {
     }
   );
 });
+document.getElementById("sendButton").onclick = function(e) {
+  e.preventDefault(); //This will prevent default action.
+  alert("This feature is still under development!")
+}

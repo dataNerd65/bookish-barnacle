@@ -4,4 +4,7 @@ launch.json
 \vendor
 composer.lock
 composer.json
-handle_messages.php
+.env
+\bookish-barnacle.git
+bfg-1.14.0.jar
+\bookish-barnacle.git.bfg-report
