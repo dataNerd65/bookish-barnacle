@@ -233,7 +233,7 @@ button.glow {
 #rotate-device {
   display: none;
 }
-
+/*
 @media screen and (max-width: 420px) {
   .message.sent img {
     width: 50%; 
@@ -256,5 +256,11 @@ button.glow {
     text-align: center;
     padding-top: 50vh;
     color: white;
+  }
+}*/
+
+@media (min-width: 769px) {
+  #skills, #contact, #experience {
+    /**/
   }
 }
