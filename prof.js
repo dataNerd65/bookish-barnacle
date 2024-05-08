@@ -97,3 +97,17 @@ document.getElementById("sendButton").onclick = function(e) {
   e.preventDefault(); //This will prevent default action.
   alert("This feature is still under development!")
 }
+window.addEventListener('resize', function() {
+  w = window.innerWidth;
+  h = window.innerHeight;
+  canvas.setAttribute('width', w);
+  canvas.setAttribute('height', h);
+});
+
+window.addEventListener('resize', function() {
+  w = window.innerWidth;
+  h = window.innerHeight;
+  canvas.setAttribute('width', w);
+  canvas.setAttribute('height', h);
+  create();
+});
